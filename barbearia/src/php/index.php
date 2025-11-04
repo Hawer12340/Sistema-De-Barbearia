@@ -17,7 +17,7 @@
     
 
     <form action="" method="post">
-<h1 class="login">LOGIN</h1>
+<h1 class="login">LOGIN Do Hawer</h1>
     <p>Email</p>
     <input type="email" name="email" id="email" placeholder="Email">
     <img id="imgEmail" src="/src/img/HyperX-Icon-Logo.png" alt="logo do email">
