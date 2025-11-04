@@ -18,13 +18,13 @@
     
 
     <form action="" method="post">
-<h1 class="login">LOGIN Do Hawer</h1>
+<h1 class="login">LOGIN</h1>
     <p>Email</p>
     <input type="email" name="email" id="email" placeholder="Email">
-    <img id="imgEmail" src="/barbearia/src/img/HyperX-Icon-Logo.png" alt="logo do email">
+    <img id="imgEmail" srcset="/barbearia/src/img/HyperX-Icon-Logo.png" alt="logo do email">
     <p>Senha</p>
    <input type="password" name="Senha" id="Senha" placeholder="Senha">
-   <img id="imgSenha" src="/barbearia/src/img/HyperX-Icon-Logo.png" alt="logo da senha">
+   <img id="imgSenha" srcset="/barbearia/src/img/HyperX-Icon-Logo.png" alt="logo da senha">
     <span class="lnr lnr-eye"></span>
     <br>
     <input type="checkbox" name="lembrarSenha" id="lembrarSenha">
@@ -39,7 +39,8 @@
 
 <footer>
 <h2>Nome da empresa</h2>
-<img id="logoImg" src="/barbearia/src/img/HyperX-Icon-Logo.png" alt="logo">
+<img id="logoImg" srcset="/barbearia/src/img/HyperX-Icon-Logo.png" alt="logo">
 </footer>
+<script src="/barbearia/src/js/index.js"></script>
 </body>
 </html>
