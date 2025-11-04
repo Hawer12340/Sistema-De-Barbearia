@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+
+form{
+    margin-top: 100px;
+    margin-left: 500px;
+    font-family: "Archivo Black",sans-serif;
+}
+footer{
+display: flex;
+margin-top: 380px;
+}
+input[type="submit"]
+{
+    color: red;
+    width: 250px;
+    min-height: 40px;
+    border-radius: 20px;
+    font-family: "Archivo Black",sans-serif;
+}
+input[type="email"],
+input[type="password"]
+{
+ padding-left: 40px;
+    color: red;
+    width: 300px;
+    min-height: 40px;
+    border-radius: 20px;
+    font-family: "Archivo Black",sans-serif;
+}
+#Senha::placeholder{
+    padding-left: 30px;
+    color: rgb(#737373);
+    font-family: "Archivo Black",sans-serif;
+}
+#email::placeholder{
+     padding-left: 30px;
+     color: rgb(#737373);
+}
+.lnr-eye {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+#logoImg{
+     margin-left: 1100px;
+    width: 60px;
+}
+#imgSenha{
+   margin-left: -300px;
+   padding-top: 20px;
+    width: 20px;
+}
+#imgEmail{
+   margin-left: -300px;
+   padding-top: 20px;
+    width: 20px;
+}
