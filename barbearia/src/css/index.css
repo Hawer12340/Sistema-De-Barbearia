@@ -1,81 +1,170 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body{
-    overflow: hidden;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-form{
-    margin-top: 100px;
-    margin-left: 500px;
-    font-family: "Archivo Black",sans-serif;
+body {
+  font-family: "Archivo Black", sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-footer{
-display: flex;
-margin-top: 380px;
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
 }
-input[type="submit"]
-{
-    color: red;
-    width: 250px;
-    min-height: 40px;
-    border-radius: 20px;
-    font-family: "Archivo Black",sans-serif;
+
+.login-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
 }
-input[type="email"],
-input[type="password"]
-{
- padding-left: 40px;
-    color: red;
-    width: 300px;
-    min-height: 40px;
-    border-radius: 20px;
-    font-family: "Archivo Black",sans-serif;
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
 }
-#Senha {
-    padding-left: 40px;
-    color: red;
-    width: 300px;
-    min-height: 40px;
-    border-radius: 20px;
-    font-family: "Archivo Black",sans-serif;
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
-#Senha::placeholder{
-    padding-left: 30px;
-    color: rgb(#737373);
-    font-family: "Archivo Black",sans-serif;
+
+.input-group p {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
 }
-#email::placeholder{
-     padding-left: 30px;
-     color: rgb(#737373);
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background: #fff;
 }
+
+.input-wrapper img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+
 .lnr-eye {
-    position: absolute;
-    top: 360px;
-    right: 930px;
-    cursor: pointer;
+  cursor: pointer;
+  margin-left: 5px;
+  color: #888;
 }
-#logoImg{
-     margin-left: 1100px;
-    width: 60px;
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 14px;
 }
-#imgSenha{
-   margin-left: -300px;
-   padding-top: 20px;
-    width: 20px;
+
+.checkbox-custom {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
-#imgEmail{
-   margin-left: -300px;
-   padding-top: 20px;
-    width: 20px;
+
+.checkbox-custom input {
+  display: none;
 }
-p{
-    font-size: 36px;
-    font-family: "Archivo Black", sans-serif;
+
+.checkbox-custom .checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
 }
-h1{
-     font-size: 70px;
-    font-family: "Archivo Black", sans-serif;
+
+.checkbox-custom input:checked + .checkmark {
+  background-color: #38b6ff;
+  border-color: #38b6ff;
+}
+
+.checkbox-custom input:checked + .checkmark::after {
+  content: '✔';
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-size: 12px;
+}
+
+a {
+  color: #38b6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-login {
+  width: 100%;
+  background: linear-gradient(to right, #b24500,#ff7504,#f6c104);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cadastro {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+footer h2 {
+  font-family: "Jura", sans-serif;
+  font-size: 20px;
+}
+
+#logoImg {
+  margin-top: 10px;
+  width: 50px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
 }
