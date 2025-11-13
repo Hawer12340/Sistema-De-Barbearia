@@ -4,7 +4,30 @@
   margin: 0;
   padding: 0;
 }
-
-
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #e1510a;
+}
+#carrinho{
+    width: 40px;
+    height: 49px;
+    position: absolute;
+    top: 10px;
+    left: 1650px;
+}
+#menuHamburguer{
+     width: 40px;
+    height: 49px;
+     position: relative;
+    top: 10px;
+}
+#bemVindo{
+    color: black;
+    position: relative;
+    top: 20px;
+    font-size: 29,2px;
+    font-family: "Archivo Black", sans-serif;
+}
 
 
