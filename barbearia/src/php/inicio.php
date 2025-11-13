@@ -112,20 +112,21 @@ $nome = "Hawer";
 </main>
 
 <script>
-    // Toggle menu hamburguer
-    const menuHamburguer = document.getElementById('menuHamburguer');
-    const menuOptions = document.getElementById('menuOptions');
+  // Menu hamburguer animado
+const menuHamburguer = document.getElementById('menuHamburguer');
+const menuOptions = document.getElementById('menuOptions');
 
-    menuHamburguer.addEventListener('click', () => {
-        menuOptions.style.display = menuOptions.style.display === 'block' ? 'none' : 'block';
-    });
+menuHamburguer.addEventListener('click', () => {
+    menuOptions.classList.toggle('show');
+});
 
-    // Fechar menu ao clicar fora
-    document.addEventListener('click', (e) => {
-        if (!menuHamburguer.contains(e.target) && !menuOptions.contains(e.target)) {
-            menuOptions.style.display = 'none';
-        }
-    });
+// Fechar menu ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!menuHamburguer.contains(e.target) && !menuOptions.contains(e.target)) {
+        menuOptions.classList.remove('show');
+    }
+});
+
 </script>
 </body>
 </html>
