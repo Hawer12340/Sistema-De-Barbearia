@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Archivo Black", sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group p {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background: #fff;
+}
+
+.input-wrapper img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+
+.lnr-eye {
+  cursor: pointer;
+  margin-left: 5px;
+  color: #888;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.checkbox-custom {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-custom input {
+  display: none;
+}
+
+.checkbox-custom .checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
+}
+
+.checkbox-custom input:checked + .checkmark {
+  background-color: #38b6ff;
+  border-color: #38b6ff;
+}
+
+.checkbox-custom input:checked + .checkmark::after {
+  content: '✔';
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-size: 12px;
+}
+
+a {
+  color: #38b6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-login {
+  width: 100%;
+  background: linear-gradient(to right, #b24500,#ff7504,#f6c104);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cadastro {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+footer h2 {
+  font-family: "Jura", sans-serif;
+  font-size: 20px;
+}
+
+#logoImg {
+  margin-top: 10px;
+  width: 50px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
