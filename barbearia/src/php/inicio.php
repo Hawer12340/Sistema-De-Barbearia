@@ -1,3 +1,10 @@
+<?php 
+$nome = "Hawer";
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,7 +16,8 @@
 <body>
     <header>
     <img id="menuHamburguer" alt="menu Hamburguer" srcset="/barbearia/src/img/menu.png"> 
-    <img id="carrinho" alt="carrinho de compras" srcset="/barbearia/src/img/carrinho.png">       
+    <img id="carrinho" alt="carrinho de compras" srcset="/barbearia/src/img/carrinho.png">  
+    <p>Seja Bem Vindo, <?php echo $nome;?></p>     
 </header>
 
 
