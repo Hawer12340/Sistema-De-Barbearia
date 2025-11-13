@@ -15,83 +15,117 @@ $nome = "Hawer";
     <title>inicio</title>
 </head>
 <body>
-    <header>
-    <img id="menuHamburguer" alt="menu Hamburguer" srcset="/barbearia/src/img/menu.png"> 
-    <img id="carrinho" alt="carrinho de compras" srcset="/barbearia/src/img/carrinho.png">  
-    <p id="bemVindo">Seja Bem Vindo, <?php echo $nome;?></p>     
+<header>
+    <img id="menuHamburguer" src="/barbearia/src/img/menu.png" alt="Menu Hamburguer">
+    <div id="menuOptions">
+        <a href="#">Início</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Combos</a>
+        <a href="#">Planos</a>
+        <a href="#">Agendamento</a>
+    </div>
+    <p id="bemVindo">Seja Bem Vindo, <?php echo $nome;?></p>
+    <img id="carrinho" src="/barbearia/src/img/carrinho.png" alt="Carrinho de compras">
 </header>
+
 <main>
-<h1>Ofertas</h1>
+    <h1>Ofertas</h1>
+    <div class="section">
+        <div class="card">
+            <p>Oferta 1</p>
+            <img src="" alt="Oferta 1">
+            <button>Comprar</button>
+        </div>
+        <div class="card">
+            <p>Oferta 2</p>
+            <img src="" alt="Oferta 2">
+            <button>Comprar</button>
+        </div>
+        <div class="card">
+            <p>Oferta 3</p>
+            <img src="" alt="Oferta 3">
+            <button>Comprar</button>
+        </div>
+        <div class="card">
+            <p>Oferta 4</p>
+            <img src="" alt="Oferta 4">
+            <button>Comprar</button>
+        </div>
+    </div>
 
-<div>
-    <!-- Oferta 1 -->
-    <p>Oferta 1</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-   <!-- Oferta 2 -->
-    <p>Oferta 2</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-       <!-- Oferta 3 -->
-    <p>Oferta 3</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-       <!-- Oferta 4 -->
-    <p>Oferta 4</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-</div>
+    <h1>Combos</h1>
+    <div class="section">
+        <div class="card">
+            <p>Combo 1</p>
+            <img src="" alt="Combo 1">
+            <button>Comprar</button>
+        </div>
+        <div class="card">
+            <p>Combo 2</p>
+            <img src="" alt="Combo 2">
+            <button>Comprar</button>
+        </div>
+        <div class="card">
+            <p>Combo 3</p>
+            <img src="" alt="Combo 3">
+            <button>Comprar</button>
+        </div>
+        <div class="card">
+            <p>Combo 4</p>
+            <img src="" alt="Combo 4">
+            <button>Comprar</button>
+        </div>
+    </div>
 
- <!-- Div 2 -->
-<div>
-    <!-- Oferta 1 -->
-    <p>Combos 1</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-   <!-- Oferta 2 -->
-    <p>Combos 2</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-       <!-- Oferta 3 -->
-    <p>Combos 3</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-       <!-- Oferta 4 -->
-    <p>Combos 4</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-</div>
+    <h1>Planos</h1>
+    <div class="section">
+        <div class="card">
+            <p>Plano 1</p>
+            <img src="" alt="Plano 1">
+            <button>Assinar</button>
+        </div>
+        <div class="card">
+            <p>Plano 2</p>
+            <img src="" alt="Plano 2">
+            <button>Assinar</button>
+        </div>
+        <div class="card">
+            <p>Plano 3</p>
+            <img src="" alt="Plano 3">
+            <button>Assinar</button>
+        </div>
+        <div class="card">
+            <p>Plano 4</p>
+            <img src="" alt="Plano 4">
+            <button>Assinar</button>
+        </div>
+    </div>
 
- <!-- Div 3 -->
-<div>
-    <!-- Oferta 1 -->
-    <p>Plano 1</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-   <!-- Oferta 2 -->
-    <p>Plano 2</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-       <!-- Oferta 3 -->
-    <p>Plano 3</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-       <!-- Oferta 4 -->
-    <p>Plano 4</p>
-    <img alt="" srcset="">
-    <button type="button"></button>
-</div>
-
-
-
-
-
+    <h1>Agendamento</h1>
+    <div class="section">
+        <div class="card">
+            <p>Agendamento</p>
+            <img src="" alt="Agendamento">
+            <button>Agendar</button>
+        </div>
+    </div>
 </main>
 
+<script>
+    // Toggle menu hamburguer
+    const menuHamburguer = document.getElementById('menuHamburguer');
+    const menuOptions = document.getElementById('menuOptions');
 
+    menuHamburguer.addEventListener('click', () => {
+        menuOptions.style.display = menuOptions.style.display === 'block' ? 'none' : 'block';
+    });
 
-
-
-
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (!menuHamburguer.contains(e.target) && !menuOptions.contains(e.target)) {
+            menuOptions.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>
