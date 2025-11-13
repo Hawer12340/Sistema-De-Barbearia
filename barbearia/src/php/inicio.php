@@ -7,9 +7,10 @@
     <title>inicio</title>
 </head>
 <body>
-    <div>
-    <img id="menuHamburguer" alt="menu Hamburguer" srcset="/barbearia/src/img/menu.png">        
-</div>
+    <header>
+    <img id="menuHamburguer" alt="menu Hamburguer" srcset="/barbearia/src/img/menu.png"> 
+    <img id="carrinho" alt="carrinho de compras" srcset="/barbearia/src/img/carrinho.png">       
+</header>
 
 
 
