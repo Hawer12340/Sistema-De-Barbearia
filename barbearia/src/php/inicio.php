@@ -1,7 +1,27 @@
 <?php 
-$nome = "Hawer";
+$servername = "localhost";
+$username = "root";
+$password = "hawer123"; // sua senha do MySQL
+$database = "barbearia";
+
+// Criar conexão
+$conn = mysqli_connect($servername, $username, $password, $database);
 
 
+// Preparar a query segura
+$stmt = mysqli_prepare($conn, "SELECT nome FROM usuarios WHERE email = ?");
+mysqli_stmt_bind_param($stmt, "s", $email);
+mysqli_stmt_execute($stmt);
+mysqli_stmt_bind_result($stmt, $nome);
+mysqli_stmt_fetch($stmt);
+mysqli_stmt_close($stmt);
+
+// Se não encontrar, colocar valor padrão
+if (!$nome) {
+    $nome = "Visitante";
+}
+
+mysqli_close($conn);
 
 ?>
 
