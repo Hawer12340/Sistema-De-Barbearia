@@ -1,15 +1,54 @@
 <?php
-session_start();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Conexão com o banco de dados
+    $conn = mysqli_connect("localhost", "root", "hawer123", "barbearia");
 
+    if (!$conn) {
+        die("Erro na conexão: " . mysqli_connect_error());
+    }
 
+    // Coleta dos dados do formulário
+    $email = $_POST["email"];
+    $senha = $_POST["Senha"];
 
+    // Verifica se o campo está vazio
+    if (empty($email) || empty($senha)) {
+        echo "<script>alert('Preencha todos os campos!'); window.location.href='index.html';</script>";
+        exit;
+    }
 
+    // Verifica se o email existe
+    $query = "SELECT senha FROM usuarios WHERE email = ?";
+    $stmt = mysqli_prepare($conn, $query);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_store_result($stmt);
 
+    // Se o e-mail não existe → manda para o cadastro
+    if (mysqli_stmt_num_rows($stmt) == 0) {
+        echo "<script>alert('Usuário não encontrado! Faça seu cadastro.'); window.location.href='cadastro.php';</script>";
+        exit;
+    }
 
+    // Se o e-mail existe → verifica senha
+    mysqli_stmt_bind_result($stmt, $senha_hash);
+    mysqli_stmt_fetch($stmt);
+
+    if (password_verify($senha, $senha_hash)) {
+        echo "<script>alert('Login realizado com sucesso!'); window.location.href='inicio.php';</script>";
+    } else {
+        echo "<script>alert('Senha incorreta!'); window.location.href='index.html';</script>";
+    }
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Um site sobre barbearia - Corte de Cabelo, Sobrancelha, Barba">
@@ -26,6 +65,7 @@ session_start();
     <!-- CSS -->
     <link rel="stylesheet" href="/barbearia/src/css/index.css">
 </head>
+
 <body>
     <main class="container">
         <form action="" method="post" class="login-form">
@@ -72,4 +112,5 @@ session_start();
 
     <script src="/barbearia/src/js/index.js"></script>
 </body>
+
 </html>
