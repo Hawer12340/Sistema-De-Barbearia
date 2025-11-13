@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css' rel='stylesheet'>
-    <title>Tela de Cadastro</title>
+    <title>Tela de Login Muito Boa para Testes de Histórico</title>
 </head>
 <body>
 
