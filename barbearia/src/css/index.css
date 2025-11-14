@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* --- CORPO DO SITE --- */ 
 body {
   font-family: "Archivo Black", sans-serif;
   background: #f8f8f8;
@@ -14,12 +15,66 @@ body {
   min-height: 100vh;
 }
 
+/* --- SWITCH VISUAL --- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;  /* Cor no modo claro */
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;     /*  ESQUERDA */
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* --- QUANDO ATIVA (modo escuro) --- */
+input:checked + .slider {
+  background-color: #4f46e5;  /* cor do fundo do switch */
+}
+
+input:checked + .slider:before {
+  transform: translateX(27px); /* Vai para a DIREITA */
+}
+
+/* --- TEMA ESCURO --- */
+/* --- COR QUE FICA AO ATIVAR --- */ 
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+
+
 .container {
   width: 100%;
   max-width: 400px;
   padding: 20px;
 }
 
+/* --- LOGIN --- */ 
 .login-form {
   background: white;
   padding: 30px;
@@ -168,3 +223,71 @@ footer h2 {
     font-size: 28px;
   }
 }
+
+/* ======== DARK MODE REAL ======== */
+
+/* Corpo */
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+
+/* Caixa do formulário */
+body.dark-mode .login-form {
+  background: #1c1c1c;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+/* Títulos */
+body.dark-mode h1,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode footer h2,
+body.dark-mode .cadastro {
+  color: #fff;
+}
+
+/* Inputs */
+body.dark-mode .input-wrapper {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+body.dark-mode input {
+  background: transparent;
+  color: #fff;
+}
+
+/* Ícone do olho */
+body.dark-mode .lnr-eye {
+  color: #ccc;
+}
+
+/* Links */
+body.dark-mode a {
+  color: #8ab4ff;
+}
+
+/* Checkbox borda */
+body.dark-mode .checkbox-custom .checkmark {
+  border-color: #fff;
+}
+
+/* Checkbox marcado */
+body.dark-mode .checkbox-custom input:checked + .checkmark {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+/* Rodapé */
+body.dark-mode footer {
+  background: transparent;
+  color: #fff;
+}
+
+body.dark-mode .btn-login {
+  background: linear-gradient(to right, #00ff55, #00ffbf, #089760);
+  color: #fff;
+}
+

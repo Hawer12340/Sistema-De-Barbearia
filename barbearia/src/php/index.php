@@ -69,6 +69,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <main class="container">
         <form action="" method="post" class="login-form">
+
+   <label class="switch">
+  <input type="checkbox" id="toggleDark">
+  <span class="slider"></span>
+</label>
+
+
             <h1>LOGIN</h1>
 
             <div class="input-group">
@@ -109,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img id="logoImg" src="/barbearia/src/img/HyperX-Icon-Logo.png" alt="logo">
         </footer>
     </main>
-
+    
     <script src="/barbearia/src/js/index.js"></script>
 </body>
 

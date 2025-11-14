@@ -11,3 +11,19 @@ btn.addEventListener('click', function() {
     }
 
 });
+
+// Trocar Modo Escuro
+const toggle = document.getElementById("toggleDark");
+const body = document.body;
+
+// Carregar tema salvo
+if (localStorage.getItem("darkmode") === "true") {
+  body.classList.add("dark-mode");
+  toggle.checked = true;
+}
+
+// Evento do botão
+toggle.addEventListener("change", () => {
+  body.classList.toggle("dark-mode");
+  localStorage.setItem("darkmode", body.classList.contains("dark-mode"));
+});
